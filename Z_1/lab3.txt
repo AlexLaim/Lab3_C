@@ -1,0 +1,9 @@
+17:50:22 - Вызван метод Subtractor
+17:50:22 - Вызван метод CustomExpressionEvaluator
+17:50:22 - Вызван метод Summator
+17:51:15 - Вызван метод Subtractor
+17:51:15 - Вызван метод CustomExpressionEvaluator
+17:51:15 - Вызван метод Summator
+17:51:43 - Вызван метод Subtractor
+17:51:43 - Вызван метод CustomExpressionEvaluator
+17:51:43 - Вызван метод Summator
