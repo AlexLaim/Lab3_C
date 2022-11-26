@@ -7,3 +7,6 @@
 17:51:43 - Вызван метод Subtractor
 17:51:43 - Вызван метод CustomExpressionEvaluator
 17:51:43 - Вызван метод Summator
+0:35:50 - Вызван метод Subtractor
+0:35:50 - Вызван метод CustomExpressionEvaluator
+0:35:50 - Вызван метод Summator
