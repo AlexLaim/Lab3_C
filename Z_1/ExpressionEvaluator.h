@@ -22,7 +22,7 @@ public:
 	virtual double setOperand(double* array, int size);
 	//Переопределяемый метод установки операндов
 	virtual double setOperand(int i, double value);
-	//Виртуальный деконструктор
+	//Виртуальный деструктор
 	virtual ~ExpressionEvaluator() {};
 };
 
