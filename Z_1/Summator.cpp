@@ -9,10 +9,12 @@
 #include <chrono>
 
 Summator::Summator(int size) {
+	//Создание массива операндов
 	operands.resize(size);
 }
 
 void Summator::LogToFile(const std::string filename) {
+	//Сохранение лога в файл
 	std::ofstream log(filename, std::ios_base::app | std::ios_base::out);
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
@@ -20,17 +22,20 @@ void Summator::LogToFile(const std::string filename) {
 }
 
 void Summator::LogToScreen() {
+	//Вывод лога на экран
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
 	std::cout << "\n" << std::endl << ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec << " - Вызван метод Summator" << std::endl;
 }
 
 double Summator::setOperand(int i, double value) {
+	//Установка операндов в массив
 	operands[i] = value;
 	return 0;
 }
 
 void Summator::Shuffle() {
+	//Сортировка по варианту 6
 	std::vector<double> temp;
 	for (size_t i = 0; i < operands.size(); i++)
 	{
@@ -52,12 +57,14 @@ void Summator::Shuffle() {
 }
 
 void Summator::Shuffle(int i, int j) {
+	//Перестановка элементов местами
 	double temp = operands[j];
 	operands[j] = operands[i];
 	operands[i] = temp;
 }
 
 double Summator::Calculate() {
+	//Расчет результата по варианту 6
 	std::cout << "\n\nSummator:" << std::endl;
 	for (size_t i = 0; i < operands.size(); i++)
 	{

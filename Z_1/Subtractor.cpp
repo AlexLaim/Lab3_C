@@ -7,6 +7,7 @@
 #include <fstream>
 
 double Subtractor::setOperand(double* array, int size) {
+	//Установка операндов в массив
 	for (int i = 0; i < 4; i++)
 	{
 		operands[i] = array[i];
@@ -15,10 +16,12 @@ double Subtractor::setOperand(double* array, int size) {
 }
 
 Subtractor::Subtractor(int size) {
+	//Создание массива операндов
 	operands.resize(size);
 }
 
 void Subtractor::Shuffle() {
+	//Сортировка по варианту 6
 	std::vector<double> temp;
 	for (size_t i = 0; i < operands.size(); i++)
 	{
@@ -40,12 +43,14 @@ void Subtractor::Shuffle() {
 }
 
 void Subtractor::Shuffle(int i, int j) {
+	//Перестановка элементов местами
 	double temp = operands[j];
 	operands[j] = operands[i];
 	operands[i] = temp;
 }
 
 void Subtractor::LogToFile(const std::string filename) {
+	//Сохранение лога в файл
 	std::ofstream log(filename, std::ios_base::app | std::ios_base::out);
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
@@ -53,12 +58,14 @@ void Subtractor::LogToFile(const std::string filename) {
 }
 
 void Subtractor::LogToScreen() {
+	//Вывод лога на экран
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
 	std::cout << std::endl << ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec << " - Вызван метод Subtractor\n" << std::endl;
 }
 
 double Subtractor::Calculate() {
+	//Расчет результата по варианту 6
 	std::cout << "Subtractor:" << std::endl;
 	for (size_t i = 0; i < operands.size(); i++)
 	{

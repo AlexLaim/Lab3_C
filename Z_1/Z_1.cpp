@@ -9,7 +9,9 @@
 int main()
 {
 	setlocale(LC_ALL, "ru");
+	//Массив указателей
 	ExpressionEvaluator* evaluators[3];
+	//Заполнение данными
 	evaluators[0] = new Subtractor(4);
 	double sub_array[4] = { 10.5, 2.5, -3, 1.5};
 	evaluators[0]->setOperand(sub_array, 4);
@@ -20,12 +22,14 @@ int main()
 	evaluators[2]->setOperand(0, 1.5);
 	evaluators[2]->setOperand(1, -4);
 	evaluators[2]->setOperand(2, 2.5);
+	//Сохранение в лога в файл, вывод лога на экран и расчеты
 	for (size_t i = 0; i < 3; i++)
 	{
 		evaluators[i]->LogToFile("lab3.txt");
 		evaluators[i]->LogToScreen();
 		evaluators[i]->Calculate();
 	}
+	//Сортировка и смена местами элементов, после перерасчет
 	for (size_t i = 0; i < 3; i++)
 	{
 		evaluators[i]->Shuffle();
@@ -36,6 +40,7 @@ int main()
 		std::cout << "\n\nShuffle";
 		evaluators[i]->Calculate();
 	}
+	//Очистка памяти
 	for (size_t i = 0; i < 3; i++)
 	{		
 		evaluators[i]->~ExpressionEvaluator();

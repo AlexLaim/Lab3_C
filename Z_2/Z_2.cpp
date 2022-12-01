@@ -10,6 +10,7 @@ int main()
     //Для рандомных значений
     srand(time(NULL));
     Auto* cars[4];
+    //Заполнение данных
     cars[0] = new PassengerCar(15);
     cars[0]->setCompany("Audi");
     cars[0]->setModel("A8");
@@ -38,6 +39,7 @@ int main()
     cars[3]->setPrice(3507500);
     cars[3]->setYearOfProd(2022);
     cars[3]->setMileage();
+    //Вывод на экран
     for (size_t i = 0; i < 4; i++)
     {
         cars[i]->printInfo();
